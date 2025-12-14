@@ -205,11 +205,13 @@ table td > a:hover {
 
 a {
   color: #9c0000;
+  text-decoration: none;
 }
 
 a:hover {
   color: #ff0000;
   text-decoration: underline;
+  transition: color 0.3s ease;
 }
 
 .skill-bar {
@@ -315,3 +317,4 @@ footer {
     margin: 0 10px;
   }
 }
+
