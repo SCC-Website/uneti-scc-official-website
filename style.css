@@ -211,6 +211,7 @@ a {
 a:hover {
   color: #ff0000;
   text-decoration: underline;
+
 }
 
 .skill-bar {
@@ -317,4 +318,32 @@ footer {
   }
 }
 
+.video-box {
+  margin: 20px auto;
+}
 
+/* 📱 Mobile (mặc định) */
+.video-box {
+  width: 260px;
+}
+
+/* 💻 Tablet trở lên */
+@media (min-width: 768px) {
+  .video-box {
+    width: 380px;
+  }
+}
+
+/* 🖥️ PC / màn to */
+@media (min-width: 1024px) {
+  .video-box {
+    width: 500px;
+  }
+}
+
+.video-box video {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
