@@ -14,12 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
   resize();
   window.addEventListener("resize", resize);
 
-  let snowflakes = Array.from({ length: 150 }, () => ({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    r: Math.random() * 3 + 1,
-    d: Math.random() * 1 + 0.5
-  }));
+    let snowflakes = [];
+    for (let i = 0; i < 150; i++) {
+    snowflakes.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 3 + 1,
+        d: Math.random() * 1 + 0.5
+    });
+    }
 
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
