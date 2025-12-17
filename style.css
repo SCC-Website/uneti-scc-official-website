@@ -242,13 +242,20 @@ a:hover {
 
 .role-card,
 .activites-card,
-.announcements-card {
+.announcements-card,
+.question-card {
   position: relative;
   border-radius: 18px;
   padding: 25px;
   cursor: pointer;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
+}
+
+.question-card {
+  background: linear-gradient(135deg, #ffc400, #ff8000);
+  border: red;
+  border-radius: 10px;
 }
 
 .role-card {
@@ -267,7 +274,8 @@ a:hover {
 
 .role-card::before,
 .activites-card::before,
-.announcements-card::before {
+.announcements-card::before,
+.question-card::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -276,13 +284,15 @@ a:hover {
 
 .role-card:hover::before,
 .activites-card:hover::before,
-.announcements-card:hover::before {
+.announcements-card:hover::before,
+.question-card:hover::before {
   opacity: 1;
 }
 
 .role-card:hover,
 .activites-card:hover,
-.announcements-card:hover {
+.announcements-card:hover,
+.question-card:hover {
   transform: translateY(-8px) scale(1.04);
   box-shadow: var(--shadow-hover);
 }
@@ -346,4 +356,19 @@ footer {
   height: auto;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+#snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+#snow.show {
+  opacity: 1;
 }
