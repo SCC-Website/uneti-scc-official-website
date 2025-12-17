@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "white";
     ctx.beginPath();
+
     snowflakes.forEach(f => {
       ctx.moveTo(f.x, f.y);
       ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
@@ -41,5 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     requestAnimationFrame(draw);
   }
+
+  setTimeout(() => {
+  canvas.classList.add("show");
   draw();
+}, 1000);
 });
