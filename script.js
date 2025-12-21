@@ -51,3 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
   draw();
 }, 1000);
 });
+
+function toggleHonor() {
+  const box = document.getElementById("honorContent");
+  box.style.display = box.style.display === "none" ? "block" : "none";
+}
