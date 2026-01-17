@@ -233,7 +233,8 @@ a:hover {
 }
 
 .role,
-.activites {
+.activites,
+.best {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -243,6 +244,7 @@ a:hover {
 .role-card,
 .activites-card,
 .announcements-card,
+.best-card,
 .question-card {
   position: relative;
   border-radius: 18px;
@@ -262,6 +264,14 @@ a:hover {
   background: linear-gradient(135deg, #fffcb1, #ffeb55);
 }
 
+.best-card {
+  background-image: url("Image/best.png");
+  background-size: cover;   
+  background-position: center; 
+  background-repeat: no-repeat;
+  border: 3px solid rgb(255, 170, 73);
+}
+
 .activites-card {
   background: linear-gradient(135deg, #ffe055, #ff683e);
 }
@@ -275,6 +285,7 @@ a:hover {
 .role-card::before,
 .activites-card::before,
 .announcements-card::before,
+.best-card::before,
 .question-card::before {
   content: "";
   position: absolute;
@@ -285,6 +296,7 @@ a:hover {
 .role-card:hover::before,
 .activites-card:hover::before,
 .announcements-card:hover::before,
+.best-card:hover:before
 .question-card:hover::before {
   opacity: 1;
 }
@@ -292,6 +304,7 @@ a:hover {
 .role-card:hover,
 .activites-card:hover,
 .announcements-card:hover,
+.best-card:hover,
 .question-card:hover {
   transform: translateY(-8px) scale(1.04);
   box-shadow: var(--shadow-hover);
