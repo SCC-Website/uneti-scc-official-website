@@ -223,4 +223,16 @@ footer {
   display: block;
 }
 
+.birthday-fall {
+  position: fixed;
+  top: -20px;
+  width: 8px;
+  height: 8px;
+  background: #ff9100;
+  border-radius: 3px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.9;
+}
+
 
