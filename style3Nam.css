@@ -22,7 +22,7 @@ p {
 
 body {
   margin: 0;
-  background: url("../Image/white.jpg");
+  background: url("Image/white.jpg");
   color: #1f2937;
   background-size: cover;
   background-position: center;
@@ -222,4 +222,5 @@ footer {
   border-radius: 14px;
   display: block;
 }
+
 
