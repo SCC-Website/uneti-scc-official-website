@@ -23,8 +23,7 @@
 
 body {
   font-family: 'Verdana', sans-serif;
-  background: linear-gradient(90deg, #fff7be, #ffffff);
-  color: #000;
+  background: linear-gradient(120deg, #fff7be 0%, transparent 40%), linear-gradient(240deg, #ffffff 0%, #fff7be 100%);
   line-height: 1.6;
 }
 
@@ -49,6 +48,28 @@ nav {
   border-radius: 18px;
   border: 2px solid var(--red-main);
   box-shadow: var(--shadow-soft);
+}
+
+.marquee {
+  overflow: hidden;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.track span {
+  margin-right: 80px;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 nav ul,
@@ -142,6 +163,12 @@ header img {
 
 header img:hover {
   transform: scale(1.08) rotate(-2deg);
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -ms-user-select: none;
 }
 
 section {
