@@ -14,16 +14,17 @@
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  transition:
-    background-color 0.35s ease,
-    color 0.35s ease,
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+  transition: background-color 0.35s ease,
+              color 0.35s ease,
+              transform 0.35s ease,
+              box-shadow 0.35s ease;
 }
 
+/* ==================== BODY & NAV ==================== */
 body {
   font-family: 'Verdana', sans-serif;
-  background: linear-gradient(120deg, #fff7be 0%, transparent 40%), linear-gradient(240deg, #ffffff 0%, #fff7be 100%);
+  background: linear-gradient(120deg, #fff7be 0%, transparent 40%),
+              linear-gradient(240deg, #ffffff 0%, #fff7be 100%);
   line-height: 1.6;
 }
 
@@ -33,18 +34,11 @@ nav {
   z-index: 999;
   margin: 15px auto;
   padding: 12px 20px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background: linear-gradient(
-    135deg,
-    rgba(255, 170, 90, 0.75),
-    rgba(255, 120, 40, 0.75)
-  );
+  background: linear-gradient(135deg, rgba(255,170,90,0.75), rgba(255,120,40,0.75));
   backdrop-filter: blur(20px);
-
   border-radius: 18px;
   border: 2px solid var(--red-main);
   box-shadow: var(--shadow-soft);
@@ -88,12 +82,12 @@ nav li a,
   font-weight: 600;
   letter-spacing: 0.3px;
   color: #000;
-
   padding: 12px 18px;
   border-radius: 14px;
 }
 
-nav li a:hover {
+nav li a:hover,
+.menu li a:hover {
   background: rgba(255,255,255,0.35);
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.18);
@@ -117,6 +111,7 @@ nav li a:hover {
   color: white;
 }
 
+/* ==================== HEADER ==================== */
 header {
   background: rgba(255, 81, 0, 0.9);
   color: white;
@@ -168,9 +163,9 @@ header img:hover {
 img {
   user-select: none;
   -webkit-user-drag: none;
-  -ms-user-select: none;
 }
 
+/* ==================== SECTION & TABLE ==================== */
 section {
   padding: 40px 20px;
   text-align: center;
@@ -187,6 +182,7 @@ table {
   background: white;
   border: 1px solid #eee;
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  width: 100%;
 }
 
 th, td {
@@ -213,10 +209,6 @@ tr:hover td {
   background: #fff6ea;
 }
 
-table td {
-  padding: 0;
-}
-
 table td > a {
   display: block;
   width: 100%;
@@ -232,15 +224,14 @@ table td > a:hover {
 
 a {
   color: #9c0000;
-  text-decoration: none;
 }
 
 a:hover {
   color: #ff0000;
   text-decoration: underline;
-
 }
 
+/* ==================== SKILL & CARDS ==================== */
 .skill-bar {
   background: #eee;
   border-radius: 25px;
@@ -259,6 +250,7 @@ a:hover {
   box-shadow: inset 0 -2px 6px rgba(0,0,0,0.25);
 }
 
+/* Grid */
 .role,
 .activites,
 .best {
@@ -268,6 +260,7 @@ a:hover {
   margin-top: 30px;
 }
 
+/* Cards */
 .role-card,
 .activites-card,
 .announcements-card,
@@ -279,24 +272,11 @@ a:hover {
   cursor: pointer;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-}
-
-.question-card {
-  background: linear-gradient(135deg, #ffc400, #ff8000);
-  border: red;
-  border-radius: 10px;
+  transition: all 0.35s ease;
 }
 
 .role-card {
   background: linear-gradient(135deg, #fffcb1, #ffeb55);
-}
-
-.best-card {
-  background-image: url("Image/best.png");
-  background-size: cover;   
-  background-position: center; 
-  background-repeat: no-repeat;
-  border: 3px solid rgb(255, 170, 73);
 }
 
 .activites-card {
@@ -309,6 +289,18 @@ a:hover {
   background: linear-gradient(135deg, #ff3d1b, #f35911);
 }
 
+.best-card {
+  background-image: url("Image/best.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 3px solid rgb(255, 170, 73);
+}
+
+.question-card {
+  background: linear-gradient(135deg, #ffc400, #ff8000);
+}
+
 .role-card::before,
 .activites-card::before,
 .announcements-card::before,
@@ -318,12 +310,13 @@ a:hover {
   position: absolute;
   inset: 0;
   opacity: 0;
+  transition: opacity 0.35s ease;
 }
 
 .role-card:hover::before,
 .activites-card:hover::before,
 .announcements-card:hover::before,
-.best-card:hover:before
+.best-card:hover::before,
 .question-card:hover::before {
   opacity: 1;
 }
@@ -343,6 +336,7 @@ a:hover {
   object-fit: cover;
 }
 
+/* ==================== FOOTER & VIDEO ==================== */
 footer {
   background: linear-gradient(90deg, #3a3a3a, #1a1a1a);
   padding: 40px;
@@ -350,45 +344,18 @@ footer {
   box-shadow: 0 -6px 20px rgba(0,0,0,0.3);
 }
 
-@media (max-width: 600px) {
-  nav {
-    padding: 10px 12px;
-  }
-
-  .menu {
-    gap: 12px;
-  }
-
-  .menu li a {
-    font-size: 14px;
-  }
-
-  .announcements-card {
-    margin: 0 10px;
-  }
-}
-
+/* Video Responsive */
 .video-box {
   margin: 20px auto;
-}
-
-/* 📱 Mobile (mặc định) */
-.video-box {
   width: 260px;
 }
 
-/* 💻 Tablet trở lên */
 @media (min-width: 768px) {
-  .video-box {
-    width: 380px;
-  }
+  .video-box { width: 380px; }
 }
 
-/* 🖥️ PC / màn to */
 @media (min-width: 1024px) {
-  .video-box {
-    width: 500px;
-  }
+  .video-box { width: 500px; }
 }
 
 .video-box video {
@@ -396,6 +363,16 @@ footer {
   height: auto;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  nav { padding: 10px 12px; }
+  
+  .menu { gap: 12px; }
+  .menu li a { font-size: 14px; }
+  
+  .announcements-card { margin: 0 10px; }
 }
 
 #snow {
